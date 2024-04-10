@@ -1,0 +1,9 @@
+#!/bin/bash
+for i in `seq 2 2 10`;
+do
+    for j in `seq 100 100 1000`;
+    do
+        echo 'generating ' $i $j
+        python farmlandgenerator.py --num_farms $i --num_units $j --graph_generator ladder --random_seed 1229 > ladder_graph_nsineq/instance_$i\_$j\_1229.pddl
+    done   
+done    

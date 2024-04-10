@@ -1,0 +1,8 @@
+#!/bin/bash
+for i in `seq 1 4`;
+do
+    for j in `seq 1 10`;
+    do
+        ./generate_saving.py --num_boats $i --num_people $j --random_seed 1229 > ijcai_instances/instance_$i\_$j\_1229.pddl
+    done   
+done    
